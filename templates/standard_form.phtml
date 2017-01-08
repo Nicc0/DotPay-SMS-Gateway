@@ -1,0 +1,9 @@
+<style>
+    .dotpay_sms_box { display: block; width: 100%; margin: 10px 0px; }
+    .dotpay_sms_input:focus { border-color: #85B7D9; background: #FFF; color: rgba(0,0,0,.8); box-shadow: none; }
+    .dotpay_sms_input { margin: 0; max-width: 100%; -webkit-box-flex: 1; -webkit-flex: 1 0 auto; -ms-flex: 1 0 auto; flex: 1 0 auto; outline: 0; -webkit-tap-highlight-color: rgba(255,255,255,0); text-align: left; line-height: 1.2142em; font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; padding: .67861429em 1em; background: #FFF; border: 1px solid rgba(34,36,38,.15); color: rgba(0,0,0,.87); border-radius: .28571429rem; -webkit-transition: box-shadow .1s ease,border-color .1s ease; transition: box-shadow .1s ease,border-color .1s ease; box-shadow: none; }
+</style>
+<div class="dotpay_sms_container">
+    <p><?php $this->getPaymentInstruction(); ?></p>
+    <input class="<?php echo esc_attr(apply_filters('woocommerce_dotpay_sms_input_class', 'dotpay_sms_input', $cart_item, $cart_item_key)); ?>" type="text" name="dotpay_sms_code" placeholder="<?php __("Kod", "dotpay_sms_gateway"); ?>" />
+</div>
